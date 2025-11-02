@@ -6,8 +6,7 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      body: Center( 
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -18,12 +17,22 @@ class Screen1 extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.amber,
               ),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/images/welcome.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             const SizedBox(height: 20),
             const Text(
               "Lingkaran di Tengah",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
+            const SizedBox(height: 20),
+            Image.asset('assets/images/welcome2.png', width: 150),
+            const SizedBox(height: 10),
+            Image.asset('assets/images/welcome3.png', width: 150),
           ],
         ),
       ),
