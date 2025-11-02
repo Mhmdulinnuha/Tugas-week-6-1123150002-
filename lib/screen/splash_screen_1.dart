@@ -10,7 +10,7 @@ class Screen1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Gambar utama dalam lingkaran
+            // Gambar utama lingkaran
             Container(
               width: 250,
               height: 250,
@@ -22,19 +22,19 @@ class Screen1 extends StatelessWidget {
                 ),
               ),
             ),
+
             const SizedBox(height: 20),
 
-            // Teks utama
+            // Judul
             const Text(
               "Welcome",
-              style: TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.normal,
-              ),
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
             ),
             const SizedBox(height: 5),
+
+            // Subjudul
             const Text(
-              "Forgot to bring your wallet \n when you are shopping?",
+              "Forgot to bring your wallet \nwhen you are shopping?",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 12.0,
@@ -45,50 +45,69 @@ class Screen1 extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // Tambahan 2 gambar kecil
+            // Dua gambar tambahan
             Image.asset('assets/images/welcome2.png', width: 150),
             const SizedBox(height: 10),
             Image.asset('assets/images/welcome3.png', width: 150),
 
             const SizedBox(height: 30),
 
-            // 🔵 Bullet indicator (Row)
+            // Bullet indicator
             Row(
-              mainAxisAlignment: MainAxisAlignment.center, // agar di tengah
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Bullet aktif
                 Container(
                   width: 10,
                   height: 10,
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF84a98c), // warna terang (aktif)
+                    color: Color(0xFF84a98c),
                   ),
                 ),
-
-                // Bullet redup 1
                 Container(
                   width: 10,
                   height: 10,
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFedede9), // warna redup
+                    color: Color(0xFFedede9),
                   ),
                 ),
-
-                // Bullet redup 2
                 Container(
                   width: 10,
                   height: 10,
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFedede9), // warna redup
+                    color: Color(0xFFedede9),
                   ),
                 ),
               ],
+            ),
+
+            const SizedBox(height: 30),
+
+            // 🔘 Tombol Continue
+            ElevatedButton(
+              onPressed: () {
+                // Tambahkan fungsi navigasi ke screen berikutnya di sini
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF84a98c), // warna tombol
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              child: const Text(
+                "Continue",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),
