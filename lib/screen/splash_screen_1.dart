@@ -27,6 +27,14 @@ class Screen1 extends StatelessWidget {
               "Welcome",
               style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
             ),
+            Text(
+              "Forgot to bring your wallet \n when you are shoping ?",
+              style: TextStyle(
+                fontSize: 12.0,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
             const SizedBox(height: 20),
             Image.asset('assets/images/welcome2.png', width: 150),
             const SizedBox(height: 10),
