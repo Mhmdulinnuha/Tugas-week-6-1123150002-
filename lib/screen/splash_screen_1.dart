@@ -6,19 +6,26 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(height: 50),
-          Container(
-            width: 250,
-            height: 250,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.amber,
+      
+      body: Center( 
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 250,
+              height: 250,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.amber,
+              ),
             ),
-          ),
-          // tambahkan widget lain di bawah ini nanti
-        ],
+            const SizedBox(height: 20),
+            const Text(
+              "Lingkaran di Tengah",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
