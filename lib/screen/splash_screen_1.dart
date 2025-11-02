@@ -16,12 +16,10 @@ class Screen1 extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.amber,
+                image: DecorationImage(
+                  image: AssetImage("assets/images/welcome.png"),
+                  fit: BoxFit.cover
               ),
-              child: ClipOval(
-                child: Image.asset(
-                  'assets/images/welcome.png',
-                  fit: BoxFit.cover,
-                ),
               ),
             ),
             const SizedBox(height: 20),
