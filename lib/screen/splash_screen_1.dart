@@ -8,8 +8,9 @@ class Screen1 extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 60), // memberi ruang di atas
+
             // Gambar utama lingkaran
             Container(
               width: 250,
@@ -86,7 +87,8 @@ class Screen1 extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 30),
+            // Tambahkan Spacer agar tombol turun ke bawah
+            const Spacer(),
 
             // 🔘 Tombol Continue dengan SizedBox & Container
             Container(
@@ -115,6 +117,9 @@ class Screen1 extends StatelessWidget {
                 ),
               ),
             ),
+
+            // Memberi jarak antara tombol dan bagian bawah layar
+            const SizedBox(height: 70),
           ],
         ),
       ),
