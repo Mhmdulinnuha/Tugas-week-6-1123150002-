@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:splash_screen/screen/splash_screen_2.dart';
+import 'package:splash_screen/screen/splash_screen_3.dart';
 
-class Screen1 extends StatelessWidget {
-  const Screen1({super.key});
+class Screen2 extends StatelessWidget {
+  const Screen2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class Screen1 extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage("assets/images/welcome.png"),
+                  image: AssetImage("assets/images/welcome2.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -29,7 +29,7 @@ class Screen1 extends StatelessWidget {
 
             // 🖋 Judul utama
             const Text(
-              "Welcome",
+              "Welcome 2",
               style: TextStyle(
                 fontSize: 10,
                 fontWeight: FontWeight.normal,
@@ -101,7 +101,7 @@ class Screen1 extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Screen2(),
+                        builder: (context) => const Screen3(),
                       ),
                     );
                   },
