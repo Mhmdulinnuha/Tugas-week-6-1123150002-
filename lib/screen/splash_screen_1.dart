@@ -24,8 +24,8 @@ class Screen1 extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const Text(
-              "Lingkaran di Tengah",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              "Welcome",
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
             ),
             const SizedBox(height: 20),
             Image.asset('assets/images/welcome2.png', width: 150),
