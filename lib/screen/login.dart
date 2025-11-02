@@ -16,64 +16,151 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Container(
               padding: const EdgeInsets.all(20.0),
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
+                // Agar tombol dan widget memenuhi lebar layar
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  SizedBox(height: 80),
-                  Icon(
+                  const SizedBox(height: 80),
+                  const Icon(
                     Icons.lock_outline,
                     size: 80,
                     color: Colors.green,
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'Welcome',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     'Silakan login untuk melanjutkan',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
 
-                  // 👇 TextField lengkap dengan border dan icon
-                  TextField(
+                  // 🔹 TextField Email
+                  const TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       labelText: 'Email',
                       hintText: 'Masukkan email Anda',
                       prefixIcon: Icon(Icons.email_outlined),
-
-                      // 🔲 Border default (semua state)
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
-
-                      // ⚪ Border saat normal (tidak fokus)
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                         borderSide: BorderSide(
-                          color: Color(0xFFE0E0E0), // Colors.grey[300]
+                          color: Color(0xFFE0E0E0),
                           width: 1,
                         ),
                       ),
-
-                      // 🔵 Border saat fokus (TextField disentuh)
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                         borderSide: BorderSide(
-                          color: Color(0xFF1976D2), // Colors.blue[700]
+                          color: Color(0xFF1976D2),
                           width: 2,
                         ),
                       ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // 🔹 TextField Password
+                  const TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      hintText: 'Masukkan password Anda',
+                      prefixIcon: Icon(Icons.lock_outline),
+                      suffixIcon: Icon(Icons.visibility_off_outlined),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                        borderSide: BorderSide(
+                          color: Color(0xFFE0E0E0),
+                          width: 1,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                        borderSide: BorderSide(
+                          color: Color(0xFF1976D2),
+                          width: 2,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  // 🔹 Tombol Lupa Password di kanan
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Lupa Password?',
+                        style: TextStyle(
+                          color: Color(0xFF1976D2),
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  // 🔹 Tombol Login (melebar penuh)
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue[700],
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      elevation: 2,
+                    ),
+                    child: const Text(
+                      'Login',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Expanded(child: Divider(color: Colors.grey[300])),
+                      Padding(padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text('atau',
+                      style: TextStyle(color: Colors.grey[600])),
+                      ),
+                      Expanded(child: Divider(color: Colors.grey[300])),
+                    ],
+                  ),
+                  OutlinedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.g_mobiledata, color: Colors.grey[800]),
+                    label: Text('Login Dengan google', style: TextStyle(color: Colors.grey[500])),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      side: BorderSide(color: Colors.grey[300]!),
                     ),
                   ),
                 ],
