@@ -88,24 +88,30 @@ class Screen1 extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            // 🔘 Tombol Continue
-            ElevatedButton(
-              onPressed: () {
-                // Tambahkan fungsi navigasi ke screen berikutnya di sini
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF84a98c), // warna tombol
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              child: const Text(
-                "Continue",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
+            // 🔘 Tombol Continue dengan SizedBox & Container
+            Container(
+              margin: const EdgeInsets.only(left: 40, right: 40),
+              child: SizedBox(
+                width: double.infinity,
+                height: 45,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Tambahkan fungsi navigasi ke screen berikutnya di sini
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF84a98c),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: const Text(
+                    "Continue",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ),
